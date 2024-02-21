@@ -6,3 +6,5 @@ function subtrahiere(a, b) {
     return a - b;
 }
 console.log(subtrahiere(1, 2)); // -1
+module.exports = addiere;
+
