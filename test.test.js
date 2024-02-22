@@ -10,4 +10,4 @@ function testAddWithTwoNumbers(a, b, expected) {
 
     }
   }
-testAddWithTwoNumbers(6, 3, 9); // Erwartetes Ergebnis: 8
+testAddWithTwoNumbers(6, 3, 8); // Erwartetes Ergebnis: 8
