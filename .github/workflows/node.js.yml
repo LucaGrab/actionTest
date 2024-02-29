@@ -62,4 +62,8 @@ jobs:
         registry-username: ${{ secrets.REGISTRY_USERNAME }}
         registry-password: ${{ secrets.REGISTRY_PASSWORD }}
         name: aci-sampleapp
+<<<<<<< HEAD
         location: 'west europe'
+=======
+        location: 'west europe'
+>>>>>>> ad8264dc12acc83e9b320d85fa3894f5ee455978
