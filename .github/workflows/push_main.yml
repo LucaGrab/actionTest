@@ -1,11 +1,19 @@
-name: merge main workflow
+name: push to main workflow
 
 on:
-    push:
+    pull_request:
         branches:
             - main
 
 jobs:
-    build_and_test:
-        !include build_and_test.yml
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout branch
+            uses: actions/checkout@v2
+            - name: Build and Test
+            uses: ./.github/workflows/build_and_test.yml
+            - name: Docker and Deploy
+            uses: ./.github/workflows/docker_and_deploy.yml
+
         
