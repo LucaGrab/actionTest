@@ -6,11 +6,9 @@ on:
             - main
 
 jobs:
-    build:
+    build_and_test:
         runs-on: ubuntu-latest
         steps:
-            - name: Checkout branch
-            uses: actions/checkout@v2
             - name: Build and Test
             uses: ./.github/workflows/build_and_test.yml
             - name: Docker and Deploy
