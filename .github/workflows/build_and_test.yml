@@ -5,12 +5,6 @@ on:
   workflow_call
 
 jobs:
-  test_job:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Nachricht
-      run: echo "Hallo Welt"
-  
   main_job:
     runs-on: ubuntu-latest
     steps:
