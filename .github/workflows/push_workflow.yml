@@ -1,0 +1,12 @@
+name: push to main workflow
+
+on:
+    pull_request:
+        branches:
+            - main
+
+jobs:
+    build_and_test:
+        uses: ./.github/workflows/build_and_test.yml
+    docker_and_deploy:
+        uses: ./.github/workflows/docker_and_deploy.yml
