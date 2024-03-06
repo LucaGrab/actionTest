@@ -6,11 +6,18 @@ on:
             - main
 
 jobs:
-    build_and_test:
+    hello_world:
         runs-on: ubuntu-latest
-        uses: ./.github/workflows/build_and_test.yml
-    docker_and_deploy:
-        runs-on: ubuntu-latest
-        uses: ./.github/workflows/docker_and_deploy.yml
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+            - name: Hello World
+              run: echo "Hello World"
+    #build_and_test:
+    #    runs-on: ubuntu-latest
+    #    uses: ./.github/workflows/build_and_test.yml
+    #docker_and_deploy:
+    #    runs-on: ubuntu-latest
+    #    uses: ./.github/workflows/docker_and_deploy.yml
 
         
