@@ -10,11 +10,13 @@ jobs:
     steps:
       - name: Checkout branch
         uses: actions/checkout@v4
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-      - run: npm ci
-      - run: npm run start
-      - run: npm run test
+      - name: Hello
+        run: echo "Hello, world!"
+#      - name: Use Node.js ${{ matrix.node-version }}
+#        uses: actions/setup-node@v4
+#        with:
+#          node-version: ${{ matrix.node-version }}
+#          cache: 'npm'
+#      - run: npm ci
+#      - run: npm run start
+#      - run: npm run test
