@@ -1,0 +1,14 @@
+name: merge main workflow
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    build_and_test:
+        !include build_and_test.yml
+        
+    deploy_to_azure:
+        needs: build_and_test
+        !include deploy_to_azure.yml
